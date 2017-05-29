@@ -1,0 +1,43 @@
+<div id="contact-content" class="container page-content hide">
+    <div class="row col-sm-10 col-sm-offset-1 padd-40-0">
+        <form id="email-form">
+            <div class="form-group col-sm-3">
+                <label>First Name</label>
+                <input type="text" id="first" class="form-control input-lg" />
+            </div>
+            <div class="form-group col-sm-3">
+                <label>Last Name</label>
+                <input type="text" id="last" class="form-control input-lg" />
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Return Email Address</label>
+                <input type="text" id="from-email"  class="form-control input-lg" />
+            </div>
+            <div class="form-group col-sm-12">
+                <label>Message</label>
+                <textarea rows="4" cols="50" id="msg"  class="form-control input-lg"></textarea>
+            </div>
+
+            <div class="col-xs-12">
+                <button class="btn btn-lg btn-success">Send</button>
+            </div>
+
+        </form>
+
+        <h1 id="email-confirm">Email Sent. Thank you! I will get back to you soon.</h1>
+    </div>
+</div>
+<script>
+    $('#email-confirm').hide();
+var socket = io();
+$('#email-form').submit(function(){
+    console.log("SUBMIT");
+    var data = {first:$('#first').val(), last:$('#last').val(), msg:$('#msg').val(), fromEmail:$('#from-email').val()};
+    socket.emit('send email', data);
+    return false;
+});
+socket.on('email sent', function(){
+    $('#email-form').hide();
+    $('#email-confirm').show();
+});
+</script>
