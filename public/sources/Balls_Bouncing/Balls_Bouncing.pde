@@ -10,11 +10,11 @@ void setup() {
 void setBalls() {
     int xpos = width/6;
     balls = new Ball[]{
-      new Ball(xpos, 10 , 5), 
-      new Ball(xpos*2, 20, 9),
-      new Ball(xpos*3, 30, 10),
-      new Ball(xpos*4, 40, 8), 
-      new Ball(xpos*5, 48, 7)
+      new Ball(xpos, 10 , 5, #f0f8ff, #ADD8E6), 
+      new Ball(xpos*2, 20, 9, #ADD8E6, #f0f8ff),
+      new Ball(xpos*3, 30, 10, #f0f8ff, #ADD8E6),
+      new Ball(xpos*4, 40, 8, #ADD8E6, #f0f8ff), 
+      new Ball(xpos*5, 48, 7, #f0f8ff, #ADD8E6)
     };
 }
 
@@ -42,7 +42,7 @@ void draw() {
 }
 
 void myResize() {
-    width = window.innerWidth - 220;
+    width = window.innerWidth - 425;
     size(width, 48);
     setBalls();
 }
@@ -50,16 +50,21 @@ void myResize() {
 class Ball {
   PVector position;
   PVector velocity;
+  color ballColor;
+  color ballHoverColor;
 
   float r, m;
 
-  Ball(float x, float y, float r_) {
+  Ball(float x, float y, float r_, color newcolor, color hovercolor) {
     position = new PVector(x, y);
     velocity = PVector.random2D();
     velocity.mult(1);
     r = r_;
     m = r*.1;
-    current_color = #ADD8E6;
+    ballColor = newcolor;
+    ballHoverColor = hovercolor;
+    current_color = newcolor;
+    
   }
 
   void update() {
@@ -89,9 +94,9 @@ class Ball {
     float disX = position.x - mouseX;
     float disY = position.y - mouseY;
     if(sqrt(sq(disX) + sq(disY)) < r ) {
-        current_color = 255;
+        current_color = ballHoverColor;
     } else {
-        current_color = #ADD8E6;
+        current_color = ballColor;
     }
   }
 

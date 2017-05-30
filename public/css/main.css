@@ -18,6 +18,23 @@ body {
     text-align: center;
 }
 
+a:visited { 
+    color: lightblue;
+    text-decoration: none;
+}
+
+.link-element {
+    font-size: 46px;
+}
+
+#project-link {
+    cursor: pointer;
+}
+
+.link-logo {
+    width: 95px;
+}
+
 .language {
     color: white;
     font-size: 16px;
@@ -47,6 +64,14 @@ body {
 }
 .hover-letter:hover {
     color:aliceblue;
+}
+
+.reverse-hover-letter {
+    cursor: default;
+    color: aliceblue;
+}
+.reverse-hover-letter:hover {
+    color:lightblue;
 }
 
 .project-item {
@@ -94,7 +119,7 @@ h3 {
 
 .ball-container {
     position: absolute;
-    margin-left: 220px;
+    margin-left: 425px;
 }
 
 h1 {

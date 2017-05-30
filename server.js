@@ -2,6 +2,7 @@
 // load the things we need
 var http     = require('http');
 var express = require('express');
+var favicon      = require('serve-favicon');
 var app = express();
 var server   = http.Server(app);
 var io       = require('socket.io')(server);
@@ -12,6 +13,7 @@ var MailController  = require('./app/controllers/mail');
 MailController = new MailController();
 
 app.use(express.static(__dirname + '/public'));
+app.use(favicon(__dirname + '/public/sources/favicon.ico'));
 
 app.use(function (req, res, next) {
    res.locals.makeURL = function(suburl){ return configServer.io_domain + suburl };

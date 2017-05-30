@@ -29,6 +29,21 @@
             //Add processed text to Html $('h2')
             $(this).html(Gtxt);
         });
+    $('.reverse-shine').each(
+        function () {
+            //Extract text from html, and attach it to "Txt" variable.
+            var Txt = $(this).text();
+            //Empty var-string waiting for loop.
+            var Gtxt = '';
+            //Loop through text to add <span id="green> on every letter.
+            for (i in Txt) {
+                //add letter by letter to Gtxt ( <span id="green"> letter </span> )
+                Gtxt = (Gtxt + '<span class="reverse-hover-letter">' + Txt[i] + '</span>');
+
+            }
+            //Add processed text to Html $('h2')
+            $(this).html(Gtxt);
+        });
 });
 </script>
 </body>
