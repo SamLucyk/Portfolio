@@ -10,7 +10,7 @@ void setup() {
 void setBalls() {
     int xpos = width/6;
     balls = new Ball[]{
-      new Ball(xpos, 10 , 5, ##ADD8E6, #f0f8ff), 
+      new Ball(xpos, 10 , 5, #ADD8E6, #f0f8ff), 
       new Ball(xpos*2, 20, 9, #ADD8E6, #f0f8ff),
       new Ball(xpos*3, 30, 10, #ADD8E6, #f0f8ff),
       new Ball(xpos*4, 40, 8, #ADD8E6, #f0f8ff), 
