@@ -13,7 +13,7 @@ var MailController  = require('./app/controllers/mail');
 MailController = new MailController();
 
 app.use(express.static(__dirname + '/public'));
-app.use(favicon(__dirname + '/public/sources/favicon.ico'));
+app.use(favicon('http://samlucyk.com/sources/favicon.ico'));
 
 app.use(function (req, res, next) {
    res.locals.makeURL = function(suburl){ return configServer.io_domain + suburl };
