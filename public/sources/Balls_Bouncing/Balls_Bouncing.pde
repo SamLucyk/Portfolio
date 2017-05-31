@@ -8,13 +8,17 @@ void setup() {
 }
 
 void setBalls() {
-    int xpos = width/6;
-    balls = new Ball[]{
-      new Ball(xpos, 10 , 5, #ADD8E6, #f0f8ff), 
-      new Ball(xpos*2, 20, 9, #ADD8E6, #f0f8ff),
-      new Ball(xpos*3, 30, 10, #ADD8E6, #f0f8ff),
-      new Ball(xpos*4, 40, 8, #ADD8E6, #f0f8ff), 
-      new Ball(xpos*5, 48, 7, #ADD8E6, #f0f8ff)
+    if (width > 150){
+        int xpos = width/6;
+        balls = new Ball[]{
+          new Ball(xpos, 10 , 5, #ADD8E6, #f0f8ff), 
+          new Ball(xpos*2, 20, 9, #ADD8E6, #f0f8ff),
+          new Ball(xpos*3, 30, 10, #ADD8E6, #f0f8ff),
+          new Ball(xpos*4, 40, 8, #ADD8E6, #f0f8ff), 
+          new Ball(xpos*5, 48, 7, #ADD8E6, #f0f8ff)
+        };
+    } else {
+        balls = new Ball[]{};
     };
 }
 
@@ -28,16 +32,18 @@ void draw() {
     b.checkBoundaryCollision();
   }
   
-  balls[0].checkCollision(balls[1]);
-  balls[0].checkCollision(balls[2]);
-  balls[0].checkCollision(balls[3]);
-  balls[0].checkCollision(balls[4]);
-  balls[1].checkCollision(balls[2]);
-  balls[1].checkCollision(balls[3]);
-  balls[1].checkCollision(balls[4]);
-  balls[2].checkCollision(balls[3]);
-  balls[2].checkCollision(balls[4]);
-  balls[3].checkCollision(balls[4]);
+  if (balls.length > 0){
+      balls[0].checkCollision(balls[1]);
+      balls[0].checkCollision(balls[2]);
+      balls[0].checkCollision(balls[3]);
+      balls[0].checkCollision(balls[4]);
+      balls[1].checkCollision(balls[2]);
+      balls[1].checkCollision(balls[3]);
+      balls[1].checkCollision(balls[4]);
+      balls[2].checkCollision(balls[3]);
+      balls[2].checkCollision(balls[4]);
+      balls[3].checkCollision(balls[4]);
+  }
   
 }
 

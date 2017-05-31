@@ -38,6 +38,6 @@ io.on('connection', function(socket){
 require('./app/routes.js')(app, io); // load our routes and pass in our app and fully configured passport
 
 
-server.listen(80, function(){
+server.listen(8080, function(){
   console.log('listening on *:80');
 });
