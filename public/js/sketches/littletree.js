@@ -5,23 +5,23 @@ var canvasWidth;
 function setup() {
     setCanvas();
     window.addEventListener("resize", myResize, false);
-    angle = PI / random(6, 12);
+    angle = PI / 8;
     noLoop();
 }
 
 function draw(){
     background('#212121');
-    maxLen = 20;
+    maxLen = 10;
     ellipseMode(CORNERS);
     var len = maxLen;
-    var thickness = 5;
+    var thickness = 7;
     stroke(0);
     translate(canvasWidth / 2, height);
-    branch(len * random(.9, 1.02), thickness);
+    branch(len * .95, thickness);
 }
 
 function branch(len, thickness) {
-    angle = PI / random(6, 12)
+    angle = PI / 6
     strokeWeight(thickness);
     setColor(len);
     line(0, 0, 0, -len);
@@ -30,12 +30,11 @@ function branch(len, thickness) {
     if (len > branchLength){
         push();
         rotate(angle);
-        branch(len * random(.60, .85), thickness * .67);
+        branch(len * .7, thickness * .67);
         pop();
         push();
-        angle = PI / random(6, 12)
         rotate(-angle);
-        branch(len * random(.60, .85), thickness * .67);
+        branch(len * .7, thickness * .67);
         pop();
     } 
     
@@ -54,7 +53,7 @@ function setCanvas() {
     var maxWidth = 100;
     canvasWidth = Math.min(window.innerWidth, maxWidth);
     var canvas = createCanvas(canvasWidth, 350);
-    canvas.parent('logo-sketch-holder');
+    canvas.parent('sketch-holder');
 }
 
 function setColor(len){
