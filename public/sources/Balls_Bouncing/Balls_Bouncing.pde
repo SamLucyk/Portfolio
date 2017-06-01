@@ -49,6 +49,9 @@ void draw() {
 
 void myResize() {
     width = window.innerWidth - 425;
+    if (width <= 150){
+       width = 0;
+    }
     size(width, 48);
     setBalls();
 }

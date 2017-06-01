@@ -23,6 +23,10 @@ a:visited {
     text-decoration: none;
 }
 
+#logo .reverse-shine {
+    font-size: 30px;
+}
+
 .link-element {
     font-size: 7vmin;
 }
@@ -117,10 +121,11 @@ h3 {
     width: 100%;
 }
 
-.ball-container {
-    position: absolute;
-    margin-left: 425px;
-}
+@media (max-width: 500px){
+    .ball-container {
+        display: none;
+    }
+} 
 
 h1 {
     padding: 10px;
