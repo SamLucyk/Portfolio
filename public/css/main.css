@@ -127,6 +127,10 @@ h3 {
     }
 } 
 
+.ball-container {
+    height: 48px;
+}
+
 h1 {
     padding: 10px;
     text-align: center;
