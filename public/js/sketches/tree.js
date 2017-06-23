@@ -10,7 +10,8 @@ function setup() {
 }
 
 function draw(){
-    background('#212121');
+    clear();
+    isTransparent = true
     maxLen = 75;
     ellipseMode(CORNERS);
     var len = maxLen;
@@ -51,7 +52,7 @@ function myResize() {
 }
 
 function setCanvas() {
-    var maxWidth = 800;
+    var maxWidth = 600;
     canvasWidth = Math.min(window.innerWidth, maxWidth);
     var canvas = createCanvas(canvasWidth, 350);
     canvas.parent('sketch-holder');

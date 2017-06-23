@@ -1,10 +1,14 @@
 <!-- views/partials/footer.ejs -->
-</div>
-<footer>
+<div class="footer">
     <div id="sketch-holder" class="center">
-      <!-- Our sketch will go here! -->
+          <!-- Our sketch will go here! -->
     </div>
     <p class="disable-select shine text-center text-muted">Sam Lucyk 2017</p>
+</div>
+</div>
+<footer>
+    
+    
 </footer>
     
 <script>
@@ -29,6 +33,7 @@
             //Add processed text to Html $('h2')
             $(this).html(Gtxt);
         });
+ 
     $('.reverse-shine').each(
         function () {
             //Extract text from html, and attach it to "Txt" variable.
@@ -44,6 +49,11 @@
             //Add processed text to Html $('h2')
             $(this).html(Gtxt);
         });
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+        }
 });
 </script>
 </body>
