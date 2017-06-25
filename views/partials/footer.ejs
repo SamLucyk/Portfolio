@@ -3,6 +3,11 @@
     <div id="sketch-holder" class="center">
           <!-- Our sketch will go here! -->
     </div>
+    <div>
+        <a id="project-link">Projects</a> · 
+        <a href="https://www.linkedin.com/in/sam-lucyk-602a3555/" target="_blank">LinkedIn</a> · 
+        <a href="https://github.com/SamLucyk" target="_blank">GitHub</a>
+    </div>
     <p class="disable-select shine text-center text-muted">Sam Lucyk 2017</p>
 </div>
 </div>
@@ -16,8 +21,12 @@
       console.log('clicked');
       setActive($(this).attr('page'), true);
     });
-    
-    $(function () {
+        
+    $('#project-link').click(function() {
+        setActive('projects');
+        
+    });
+        
     $('.shine').each(
         function () {
             //Extract text from html, and attach it to "Txt" variable.
@@ -49,12 +58,12 @@
             //Add processed text to Html $('h2')
             $(this).html(Gtxt);
         });
-        function getRandomInt(min, max) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-        }
-});
+    
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+    }
 </script>
 </body>
 </html>
