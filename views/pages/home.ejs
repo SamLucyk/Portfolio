@@ -1,5 +1,5 @@
 <div id="home-content" class="container page-content hide center">
-    <div class="home-item" >
+    <div class="home-item" project-id="songbook-project">
         <div class="home-item-content">
             <img src="sources/SongBook/main.png">
             <div class="home-item-top">
@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-    <div class="home-item">
+    <div class="home-item" project-id="localaventura-project">
         <div class="home-item-content">
             <img src="sources/LocalAventura/main.png">
             <div class="home-item-top">
@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div class="home-item">
+    <div class="home-item" project-id="dodate-project">
         <div class="home-item-content">
             <img src="sources/DoDate/main.png">
             <div class="home-item-top">
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-    <div class="home-item">
+    <div class="home-item" project-id="pillman-project">
         <div class="home-item-content">
             <img src="sources/PillMan/main.png">
             <div class="home-item-top">
@@ -61,6 +61,18 @@
 </div>
 
 <script>
+
+$('.home-item').click(
+    function(){
+        var projId = $( this ).attr('project-id');
+        setActive('projects');
+        $('html, body').animate({
+            scrollTop: $('#'+projId).offset().top - 5
+        }, 1000);
+    }
+)
+    
+    
 $('.home-item').hover(
     function() {
         //$( this ).css('border', '1px solid lightblue');
