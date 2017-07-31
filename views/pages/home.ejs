@@ -1,24 +1,75 @@
-<div id="home-content" class="container page-content hide">
-    <div class="col-md-12 mt45">
-        <div class="mt20 col-md-6 home-item">
-            <img src="sources/LocalAventura/main.png">
-        </div>
-        <div class="mt20 col-md-6 home-item">
-            <img src="sources/DoDate/main.png">
-        </div>
-        <div class="mt20 col-md-6 home-item">
+<div id="home-content" class="container page-content hide center">
+    <div class="home-item" >
+        <div class="home-item-content">
             <img src="sources/SongBook/main.png">
+            <div class="home-item-top">
+                <div class="title">SongBook</div>
+                <div class="date">Dec 2016 - Present</div>
+            </div>
+            <div class="tech-list">
+                <div class="item">PHP</div>
+                <div class="item">MySQL</div>
+                <div class="item">JS</div>
+                <div class="item">AJAX</div>
+                <div class="item">AWS</div>
+            </div>
         </div>
-        <div class="mt20 col-md-6 home-item">
+    </div>
+    <div class="home-item">
+        <div class="home-item-content">
+            <img src="sources/LocalAventura/main.png">
+            <div class="home-item-top">
+                <div class="title">LocalAventura</div>
+                <div class="date">July-Dec 2016</div>
+            </div>
+            <div class="tech-list">
+                <div class="item">PHP</div>
+                <div class="item">MySQL</div>
+                <div class="item">JS</div>
+                <div class="item">AJAX</div>
+            </div>
+        </div>
+    </div>
+    <div class="home-item">
+        <div class="home-item-content">
+            <img src="sources/DoDate/main.png">
+            <div class="home-item-top">
+                <div class="title">DoDate</div>
+                <div class="date">Nov 2016</div>
+            </div>
+            <div class="tech-list">
+                <div class="item">PHP</div>
+                <div class="item">MySQL</div>
+                <div class="item">JS</div>
+            </div>
+        </div>
+    </div>
+    <div class="home-item">
+        <div class="home-item-content">
             <img src="sources/PillMan/main.png">
+            <div class="home-item-top">
+                <div class="title">Pill Man</div>
+                <div class="date">Jan - May 2017</div>
+            </div>
+            <div class="tech-list">
+                <div class="item">Unity</div>
+                <div class="item">C#</div>
+                <div class="item">Blender</div>
+            </div>
         </div>
-        
-        <div class="mt20 col-md-6 home-item">
-            <img src="sources/RollABall/main.png">
-        </div>
-        <div class="mt20 col-md-6 home-item">
-            <img src="sources/evo.png">
-        </div>
-        
     </div>
 </div>
+
+<script>
+$('.home-item').hover(
+    function() {
+        //$( this ).css('border', '1px solid lightblue');
+        $( this ).find( '.home-item-top' ).css('display', 'block');
+        $( this ).find( '.tech-list' ).css('display', 'block');
+        
+  }, function() {
+        //$( this ).css('border', 'none');
+        $( this ).find( '.home-item-top' ).css('display', 'none');
+        $( this ).find( '.tech-list' ).css('display', 'none');
+  })
+</script>
