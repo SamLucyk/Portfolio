@@ -65,7 +65,7 @@
 $('.home-item').click(
     function(){
         var projId = $( this ).attr('project-id');
-        setActive('projects');
+        setActive('projects', false);
         $('html, body').animate({
             scrollTop: $('#'+projId).offset().top - 5
         }, 1000);
