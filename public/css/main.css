@@ -49,6 +49,7 @@ h2 {
 }
 
 .frontimg{
+    box-shadow: none;
     border-radius: 70%;
     width: 75%;
     margin-top:25px;
@@ -188,6 +189,7 @@ ul {
     height: 40px;
     border: 2px solid #979797;
     margin: 0 10px 10px 0;
+    box-shadow: none;
 }
 
 h3 {
@@ -317,6 +319,7 @@ a:hover {
 .contact-img-caption {
     color: grey;
     margin-top: 10px;
+    margin-bottom: 15px;
     font-size: 16px;
 }
 
