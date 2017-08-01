@@ -10,5 +10,6 @@ function setActive(page, scroll = true) {
             scrollTop: $("#navbar").offset().top - 5
         }, 1000);
     }
+    $("#footer").appendTo("#footer-container");
 }
 
