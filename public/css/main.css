@@ -26,11 +26,11 @@ img {
   -moz-background-size: cover;
   -o-background-size: cover;
      background-size: cover;
-        background: #f3faff;
+    background: #f3faff; /* For browsers that do not support gradients */
 }
 
 h2 {
-    color: aliceblue;
+    color: #83b8ca;
 }
 
 #email-form{
@@ -59,9 +59,11 @@ h2 {
 .center {
     text-align: center;
 }
-
+a{
+    cursor: pointer;
+}
 a:visited { 
-    color: lightblue;
+    color: #83b8ca;
     text-decoration: none;
 }
 
@@ -82,26 +84,6 @@ ul {
 .footer {
   position: relative;
   padding: 1rem;
-}
-
-.white-outline {
-    text-shadow: 1px 1px white, -1px -1px white, -1px 1px white, 1px -1px white;
-}
-
-.black-outline {
-    text-shadow: 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
-}
-
-.blue-outline {
-    text-shadow: 1px 1px lightblue, -1px -1px lightblue, -1px 1px lightblue, 1px -1px lightblue;
-}
-
-.grey-outline {
-    text-shadow: 1px 1px #595a5b, -1px -1px #595a5b, -1px 1px #595a5b, 1px -1px #595a5b;
-}
-
-#project-link {
-    cursor: pointer;
 }
 
 .link-logo {
@@ -136,7 +118,7 @@ ul {
     float: left;
     font-size: 35px;
     margin-left: 2%;
-    color: lightblue;
+    color: #83b8ca;
     cursor: default;
     padding-top: 5px;
 }
@@ -160,11 +142,11 @@ ul {
     color: grey;
 }
 .reverse-hover-letter:hover {
-    color:lightblue;
+    color:#83b8ca;
 }
 
 .project-item {
-    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
     padding: 20px;
     text-align: left;
 }
@@ -172,17 +154,13 @@ ul {
 .project-title {
     text-align: center;
     font-size: 26px;
-    color: lightblue;
+    color: #83b8ca;
 }
 
 .project-caption {
     color: grey;
     text-align: center;
     padding-bottom: 20px;
-}
-
-.project-detail {
-    display: none;
 }
 
 .thumbnails img {
@@ -192,13 +170,17 @@ ul {
     box-shadow: none;
 }
 
+.project-main-img {
+    width: 100%;
+}
+
 h3 {
-    color:aliceblue;
+    color:#83b8ca;
     text-align: center;
 }
 
 .thumbnails img:hover {
-    border: 2px solid lightblue;
+    border: 2px solid #83b8ca;
     cursor:pointer;
 }
 
@@ -230,7 +212,7 @@ h1 {
 }
 
 a {
-    color: lightblue;
+    color: #83b8ca;
 }
 
 a:hover {
@@ -265,17 +247,12 @@ a:hover {
 }
 
 .nav-item:hover {
-    color: lightblue;
-    cursor: pointer;
-}
-
-.nav-item.active:hover {
-    color: grey;;
+    color: #83b8ca;
     cursor: pointer;
 }
 
 .nav-item.active{
-    color: lightblue;
+    color: #83b8ca;
     font-size:24px;
 }
 
@@ -333,7 +310,7 @@ a:hover {
     position: absolute;
     top: 0px;
     background: rgba(0,0,0,.7);
-    color: lightblue;
+    color: #83b8ca;
     width: 100%;
     font-size: 20px;
     height: 40px;
@@ -366,7 +343,7 @@ a:hover {
     margin-top: 5px;
     float: left;
     border-radius: 50%;
-    color: lightblue;
+    color: #83b8ca;
     background: rgba(0,0,0,.7);
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
@@ -428,7 +405,7 @@ a:hover {
         font-size: 10px;
         float: left;
         border-radius: 50%;
-        color: lightblue;
+        color: #83b8ca;
         background: rgba(0,0,0,.7);
         -webkit-user-select: none;
         -moz-user-select: none;
